@@ -29,7 +29,7 @@ const leagueVars = {
 
             let output = <>Tipoff<br/>{leagueVars.global.getGameStartTime(startTime)}</>;
 
-            if (status == 'completed') {
+            if (status === 'completed') {
                 output = 'Final';
             } else if (dayjs().isAfter(startTime)) {
                 // we don't have this information, so we'll just use a placeholder
@@ -65,7 +65,7 @@ const leagueVars = {
 
             let output = <>Begins<br/>{leagueVars.global.getGameStartTime(startTime)}</>;
 
-            if (status == 'completed') {
+            if (status === 'completed') {
                 output = 'Final';
             } else if (dayjs().isAfter(startTime)) {
                 // we don't have this information, so we'll just use a placeholder
