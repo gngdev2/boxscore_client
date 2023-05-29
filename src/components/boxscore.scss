@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$borderRadius: 8px;
+
+.boxscore__team {
+    display: flex;
+    flex-direction: row;
+
+    >div, >label {
+        padding: 10px 0;
+    }
+
+    >label {
+        width: 50px;
+        
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.boxscore__team--header {
+    display: flex;
+    flex-direction: row;
+
+    >label {
+        border-radius: $borderRadius 0 0 0;
+    }
+
+    >div, >label {
+        padding: 10px 0;
+        border: 1px solid #000000;
+        border-right: 0;
+    }
+
+    .boxscore__team__results {
+        border-right: 1px solid #000000;
+        border-radius: 0 $borderRadius 0 0;
+    }
+}
+
+.boxscore__team--home, .boxscore__team--away {
+    >label, >div {
+        border-left: 1px solid #000000;
+    }
+    .boxscore__team__results {
+        border-right: 1px solid #000000;
+    }
+}
+
+.boxscore__team__units {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 80%;
+
+    >span {
+        flex: 1 1 0;
+    }
+}
+
+.boxscore__team__results {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%;
+    
+
+    >span {
+        width: 33.33%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.boxscore__details {
+    display: flex;
+    flex-direction: row;
+
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+        border-right: 0;
+
+        small {
+            display: none;
+        }
+    }
+
+    .boxscore__details__team {
+        width: 40%;
+        background-color: #000000;
+        color: #FFFFFF;
+
+        // more team background colors can be added here, but it defaults to black
+        &.nba {
+            &.okc {
+                background-color: #007AC3;
+            }
+
+            &.mia {
+                background-color: #9A002A;
+            }
+        }
+
+        &.mlb {
+            &.laa {
+                background-color: #CD1141;
+            }
+
+            &.sea {
+                background-color: #0D2D56;
+            }
+        }
+    }
+
+    .boxscore__details__team--home {
+        border-right: 1px solid #000000;
+        border-radius: 0 0 $borderRadius 0;
+    }
+
+    .boxscore__details__team--away {
+        border-radius: 0 0 0 $borderRadius;
+    }
+
+    .boxscore__details__info {
+        width: 20%;
+        text-align: center;
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+}
