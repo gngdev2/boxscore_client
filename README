@@ -1,0 +1,6 @@
+Steps to run
+
+run: npm install
+run: npm start
+
+A browser window should automatically open; otherwise, here's the URL to the app: http://localhost:3000
