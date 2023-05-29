@@ -1,9 +1,8 @@
 import axios from "axios";
-
-const API_URL = 'http://localhost:4000/api';
+import ENV from "../env";
 
 const get = (league) => {
-    return axios.get(`${API_URL}/game-stats/get?league=${league}`)
+    return axios.get(`${ENV.GAME_DATA_API_URL}/game-stats/get?league=${league}`)
     .then((res) => {
         return res;
     });
