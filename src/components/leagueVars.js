@@ -32,7 +32,8 @@ const leagueVars = {
             if (status === 'completed') {
                 output = 'Final';
             } else if (dayjs().isAfter(startTime)) {
-                // we don't have this information, so we'll just use a placeholder
+                // we don't have this information (maybe because the status is simply, "completed"), 
+                // so we'll just use a placeholder.
                 // also, tipoffs are almost always late, so this check wouldn't really work
                 output = <>12:00<br />1st qtr</>
             }
